@@ -1,2 +1,0 @@
-# converterProject
-University research
