@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Converter</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="jumbotron text-center">
+  <h1>Welcome to converter!</h1>
+  <p>You can convert your CSV to PDF</p>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <h3></h3>
+    </div>
+    <div class="col-sm-4">
+      <h3>Drop your csv here</h3>
+        <form action="/submit_form" method="post" enctype=multipart/form-data>
+        <label for="file">File: </label><input id="file" type="file" name="file">
+        <h4>Default style:</h4>
+        <select class="form-control" id="exampleFormControlSelect0" name="default_style">
+          <option>off</option>
+          <option>on</option>
+        </select>
+    </div>
+    <div class="col-sm-4">
+      <h3></h3>
+    </div>
+  </div>
+    <div class="row">
+    <div class="col-sm-4">
+      <h3>Options for table head</h3>
+        <h4>font-family</h4>
+        <select class="form-control" id="exampleFormControlSelect1" name="th, font-family">
+          <option>-</option>
+          <option>Times New Roman</option>
+          <option>Arial</option>
+        </select>
+        <h4>font-style</h4>
+        <select class="form-control" id="exampleFormControlSelect2" name="th, font-style">
+          <option>-</option>
+          <option>normal</option>
+          <option>italic</option>
+          <option>oblique</option>
+        </select>
+        <h4>font-size (px)</h4>
+        <select class="form-control" id="exampleFormControlSelect3" name="th, font-size">
+          <option>-</option>
+          <option>10</option>
+          <option>20</option>
+          <option>30</option>
+        </select>
+        <h4>font weight</h4>
+        <select class="form-control" id="exampleFormControlSelect4" name="th, font-weight">
+          <option>-</option>
+          <option>normal</option>
+          <option>bold</option>
+        </select>
+        <h4>border</h4>
+        <select class="form-control" id="exampleFormControlSelect5" name="th, border">
+          <option>-</option>
+          <option>1px solid black</option>
+        </select>
+        <h4>border-collapse</h4>
+        <select class="form-control" id="exampleFormControlSelect6" name="th, border-collapse">
+          <option>-</option>
+          <option>collapse</option>
+          <option>separate</option>
+        </select>
+        <h4>width</h4>
+        <select class="form-control" id="exampleFormControlSelect7" name="th, width">
+          <option>-</option>
+          <option>100%</option>
+        </select>
+        <h4>height</h4>
+        <select class="form-control" id="exampleFormControlSelect8" name="th, height">
+          <option>-</option>
+          <option>100%</option>
+        </select>
+        <h4>text-align</h4>
+        <select class="form-control" id="exampleFormControlSelect9" name="th, text-align">
+          <option>-</option>
+          <option>left</option>
+          <option>center</option>
+          <option>right</option>
+        </select>
+        <h4>vertical-align</h4>
+        <select class="form-control" id="exampleFormControlSelect10" name="th, vertical-align">
+          <option>-</option>
+          <option>top</option>
+          <option>middle</option>
+          <option>bottom</option>
+        </select>
+        <h4>padding</h4>
+        <select class="form-control" id="exampleFormControlSelect11" name="th, padding">
+          <option>-</option>
+          <option>5px</option>
+          <option>10px</option>
+          <option>15px</option>
+        </select>
+        <h4>color</h4>
+        <select class="form-control" id="exampleFormControlSelect12" name="th, color">
+          <option>-</option>
+          <option>white</option>
+          <option>black</option>
+          <option>red</option>
+          <option>orange</option>
+          <option>red</option>
+          <option>yellow</option>
+          <option>green</option>
+          <option>blue</option>
+          <option>indigo</option>
+        </select>
+    </div>
+    <div class="col-sm-4">
+      <h3>Options for table data</h3>
+        <h4>font-family</h4>
+        <select class="form-control" id="exampleFormControlSelect13" name="td, font-family">
+          <option>-</option>
+          <option>Times New Roman</option>
+          <option>Arial</option>
+        </select>
+        <h4>font-style</h4>
+        <select class="form-control" id="exampleFormControlSelect14" name="td, font-style">
+          <option>-</option>
+          <option>normal</option>
+          <option>italic</option>
+          <option>oblique</option>
+        </select>
+        <h4>font-size (px)</h4>
+        <select class="form-control" id="exampleFormControlSelect15" name="td, font-size">
+          <option>-</option>
+          <option>10</option>
+          <option>20</option>
+          <option>30</option>
+        </select>
+        <h4>font weight</h4>
+        <select class="form-control" id="exampleFormControlSelect16" name="td, font-weight">
+          <option>-</option>
+          <option>normal</option>
+          <option>bold</option>
+        </select>
+        <h4>border</h4>
+        <select class="form-control" id="exampleFormControlSelect17" name="td, border">
+          <option>-</option>
+          <option>1px solid black</option>
+        </select>
+        <h4>border-collapse</h4>
+        <select class="form-control" id="exampleFormControlSelect18" name="td, border-collapse">
+          <option>-</option>
+          <option>collapse</option>
+          <option>separate</option>
+        </select>
+        <h4>width</h4>
+        <select class="form-control" id="exampleFormControlSelect19" name="td, width">
+          <option>-</option>
+          <option>100%</option>
+        </select>
+        <h4>height</h4>
+        <select class="form-control" id="exampleFormControlSelect20" name="td, height">
+          <option>-</option>
+          <option>100%</option>
+        </select>
+        <h4>text-align</h4>
+        <select class="form-control" id="exampleFormControlSelect21" name="td, text-align">
+          <option>-</option>
+          <option>left</option>
+          <option>center</option>
+          <option>right</option>
+        </select>
+        <h4>vertical-align</h4>
+        <select class="form-control" id="exampleFormControlSelect22" name="td, vertical-align">
+          <option>-</option>
+          <option>top</option>
+          <option>middle</option>
+          <option>bottom</option>
+        </select>
+        <h4>padding</h4>
+        <select class="form-control" id="exampleFormControlSelect23" name="td, padding">
+          <option>-</option>
+          <option>5px</option>
+          <option>10px</option>
+          <option>15px</option>
+        </select>
+        <h4>color</h4>
+        <select class="form-control" id="exampleFormControlSelect24" name="td, color">
+          <option>-</option>
+          <option>white</option>
+          <option>black</option>
+          <option>red</option>
+          <option>orange</option>
+          <option>red</option>
+          <option>yellow</option>
+          <option>green</option>
+          <option>blue</option>
+          <option>indigo</option>
+        </select>
+    </div>
+    <div class="col-sm-4">
+      <h3>Options for table itself</h3>
+        <h4>font-family</h4>
+        <select class="form-control" id="exampleFormControlSelect25" name="table, font-family">
+          <option>-</option>
+          <option>Times New Roman</option>
+          <option>Arial</option>
+        </select>
+        <h4>font-style</h4>
+        <select class="form-control" id="exampleFormControlSelect26" name="table, font-style">
+          <option>-</option>
+          <option>normal</option>
+          <option>italic</option>
+          <option>oblique</option>
+        </select>
+        <h4>font-size (px)</h4>
+        <select class="form-control" id="exampleFormControlSelect27" name="table, font-size">
+          <option>-</option>
+          <option>10</option>
+          <option>20</option>
+          <option>30</option>
+        </select>
+        <h4>font weight</h4>
+        <select class="form-control" id="exampleFormControlSelect28" name="table, font-weight">
+          <option>-</option>
+          <option>normal</option>
+          <option>bold</option>
+        </select>
+        <h4>border</h4>
+        <select class="form-control" id="exampleFormControlSelect29" name="table, border">
+          <option>-</option>
+          <option>1px solid black</option>
+        </select>
+        <h4>border-collapse</h4>
+        <select class="form-control" id="exampleFormControlSelect30" name="table, border-collapse">
+          <option>-</option>
+          <option>collapse</option>
+          <option>separate</option>
+        </select>
+        <h4>width</h4>
+        <select class="form-control" id="exampleFormControlSelect31" name="table, width">
+          <option>-</option>
+          <option>100%</option>
+        </select>
+        <h4>height</h4>
+        <select class="form-control" id="exampleFormControlSelect32" name="table, height">
+          <option>-</option>
+          <option>100%</option>
+        </select>
+        <h4>text-align</h4>
+        <select class="form-control" id="exampleFormControlSelect33" name="table, text-align">
+          <option>-</option>
+          <option>left</option>
+          <option>center</option>
+          <option>right</option>
+        </select>
+        <h4>vertical-align</h4>
+        <select class="form-control" id="exampleFormControlSelect34" name="table, vertical-align">
+          <option>-</option>
+          <option>top</option>
+          <option>middle</option>
+          <option>bottom</option>
+        </select>
+        <h4>padding</h4>
+        <select class="form-control" id="exampleFormControlSelect35" name="table, padding">
+          <option>-</option>
+          <option>5px</option>
+          <option>10px</option>
+          <option>15px</option>
+        </select>
+        <h4>color</h4>
+        <select class="form-control" id="exampleFormControlSelect36" name="table, color">
+          <option>-</option>
+          <option>white</option>
+          <option>black</option>
+          <option>red</option>
+          <option>orange</option>
+          <option>red</option>
+          <option>yellow</option>
+          <option>green</option>
+          <option>blue</option>
+          <option>indigo</option>
+        </select>
+    </div>
+    </div>
+   <div class="row">
+    <div class="col-sm-4">
+      <h3></h3>
+    </div>
+    <div class="col-sm-5">
+      <h3>Submit here</h3>
+          <button type="submit">Submit</button>
+    </div>
+    <div class="col-sm-4">
+      <h3></h3>
+    </div>
+  </div>
+  </form>
+</div>
+</body>
+</html>

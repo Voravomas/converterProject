@@ -1,4 +1,4 @@
-from myarray import MyArray
+from temp.myarray import MyArray
 
 # An example of using a hash table from 'http://blog.chapagain.com.np/
 # hash-table-implementation-in-python-data-structures-algorithms/'

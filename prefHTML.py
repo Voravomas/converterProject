@@ -2,7 +2,7 @@ part1 = "<!DOCTYPE html>\n<html>\n<head>\n<style>\n"
 part2 = "</style>\n</head>\n<body>\n"
 
 types = ["th", "td", "table"]
-attributes = ["font-family", "font-style", "font-size", "font_weight", "border",
+attributes = ["font-family", "font-style", "font-size", "font-weight", "border",
               "border-collapse", "width", "height", "text-align",
               "vertical-align", "padding", "color"]
 
@@ -19,7 +19,7 @@ def makePref(pref):
         for attr in attributes:
             key = typer + ", " + attr
             val = pref.search(key)
-            if val == "None":
+            if val == "-":
                 continue
             else:
                 if typer == "th":
