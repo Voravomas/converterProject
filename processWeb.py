@@ -1,4 +1,4 @@
-from temp.hash_table import HashTable
+from hash_table import HashTable
 
 
 def hasher(theDict):

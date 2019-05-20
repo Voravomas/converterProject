@@ -1,9 +1,10 @@
 from flask import Flask, render_template, request, send_file, redirect
 from werkzeug.utils import secure_filename
-from temp.errCheck import correctName
-from temp.transformer import mover, baseDel
-from temp.main import preMain
-from temp.processWeb import hasher
+from errCheck import correctName
+from transformer import mover, baseDel
+from main import preMain
+from processWeb import hasher
+
 import os
 import asyncio
 loop = asyncio.get_event_loop()

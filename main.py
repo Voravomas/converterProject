@@ -1,6 +1,6 @@
-from temp.transformer import baseDel, mover
-from temp.makeHTML import webing
-from temp.prefHTML import mainPref
+from transformer import baseDel, mover
+from makeHTML import webing
+from prefHTML import mainPref
 
 
 def preMain(dictADT):
